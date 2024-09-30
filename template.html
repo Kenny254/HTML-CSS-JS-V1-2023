@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+
+    <title>Template</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .btn-custom {
+            background-color: #dc3545;
+            color: #fff;
+            border: 1px solid #ffffff;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        .btn-custom:hover {
+            background-color: #ffffff;
+            border: 1px solid #dc3545;
+            color: #dc3545;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #dc3545;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            color: white;
+        }
+
+        .sidenav h1 {
+            font-size: 24px;
+            padding: 10px 32px;
+            margin-bottom: 0;
+        }
+
+        .sidenav h2 {
+            font-size: 18px;
+            padding: 10px 32px;
+            margin-top: 0;
+        }
+
+        .sidenav a {
+            padding: 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav .separator {
+            border-bottom: 1px solid white;
+            margin: 10px 0;
+        }
+
+        .sidenav a:hover {
+            background-color: #ffffff;
+            color: #dc3545;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        .footer {
+            background-color: #dc3545;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+    <script>
+        function toggleNav() {
+            var sidenav = document.getElementById("mySidenav");
+            var main = document.getElementById("main");
+            if (sidenav.style.width === "250px") {
+                sidenav.style.width = "0";
+                main.style.marginLeft = "0";
+            } else {
+                sidenav.style.width = "250px";
+                main.style.marginLeft = "250px";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Side menu -->
+    <div id="mySidenav" class="sidenav">
+        <h1>WebApp Name</h1>
+        <h2>Your Subtitle Here</h2>
+        <div class="separator"></div>
+        <a href="#"><span>&#x1F3E0;</span> Home</a> <!-- House icon -->
+        <div class="separator"></div>
+        <a href="#"><span>&#x1F6D2;</span> Products</a> <!-- Shopping cart icon -->
+        <div class="separator"></div>
+        <a href="#"><span>&#x1F4B3;</span> Services</a> <!-- Briefcase icon -->
+        <div class="separator"></div>
+        <a href="#"><span>&#x1F4D6;</span> Blog</a> <!-- Open book icon -->
+        <div class="separator"></div>
+        <a href="#"><span>&#x1F4E7;</span> Contact</a> <!-- Envelope icon -->
+        <div class="separator"></div>
+        <a href="#"><span>&#x1F4C3;</span> About</a> <!-- Page icon -->
+        <div class="separator"></div>
+        <a href="#"><span>&#x1F464;</span> Logout</a> <!-- Bust in silhouette icon -->
+    </div>
+
+    <!-- Main content -->
+    <div id="main">
+        <!-- Navbar -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
+                <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="toggleNav()">☰</span>
+                <a class="navbar-brand text-light text-center mx-auto" href="#">Template</a>
+            </nav>
+        </header>
+
+        <!-- Content goes here -->
+        <div class="container">
+            <h2>Main Content Area</h2>
+            <p>Add your preferred web components here</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>STEAM Academy &copy; 2024. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap's JS for responsive design -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
